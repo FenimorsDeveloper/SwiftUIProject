@@ -11,6 +11,27 @@
 		B736772429F05D240017B9AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736772329F05D240017B9AC /* ContentView.swift */; };
 		B736772629F05D260017B9AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B736772529F05D260017B9AC /* Assets.xcassets */; };
 		B736772A29F05D260017B9AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B736772929F05D260017B9AC /* Preview Assets.xcassets */; };
+		B736773929F065E40017B9AC /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736773829F065E40017B9AC /* CardsViewModel.swift */; };
+		B736773B29F066220017B9AC /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736773A29F066220017B9AC /* CardsView.swift */; };
+		B736773F29F067DD0017B9AC /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736773E29F067DD0017B9AC /* Vendor.swift */; };
+		B736774529F06ADF0017B9AC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736774429F06ADF0017B9AC /* CardView.swift */; };
+		B736776C29F082300017B9AC /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B736776729F082130017B9AC /* OpenSans-Bold.ttf */; };
+		B736776D29F082330017B9AC /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B736776A29F082140017B9AC /* OpenSans-BoldItalic.ttf */; };
+		B736776E29F0823D0017B9AC /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B736776029F082120017B9AC /* OpenSans-ExtraBold.ttf */; };
+		B736776F29F0823F0017B9AC /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B736776429F082130017B9AC /* OpenSans-ExtraBoldItalic.ttf */; };
+		B736777029F082420017B9AC /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B736776629F082130017B9AC /* OpenSans-Italic.ttf */; };
+		B736777129F082440017B9AC /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B736776529F082130017B9AC /* OpenSans-Light.ttf */; };
+		B736777229F082470017B9AC /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B736776129F082120017B9AC /* OpenSans-LightItalic.ttf */; };
+		B736777329F082490017B9AC /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B736776229F082120017B9AC /* OpenSans-Medium.ttf */; };
+		B736777429F0824B0017B9AC /* OpenSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B736776329F082120017B9AC /* OpenSans-MediumItalic.ttf */; };
+		B736777529F0824E0017B9AC /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B736776829F082130017B9AC /* OpenSans-Regular.ttf */; };
+		B736777629F082500017B9AC /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B736776929F082130017B9AC /* OpenSans-SemiBold.ttf */; };
+		B736777729F082530017B9AC /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B736776B29F082140017B9AC /* OpenSans-SemiBoldItalic.ttf */; };
+		B736777D29F086950017B9AC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736777C29F086950017B9AC /* Colors.swift */; };
+		B736777F29F087970017B9AC /* Font+OpenSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736777E29F087970017B9AC /* Font+OpenSans.swift */; };
+		B736778329F08B470017B9AC /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736778229F08B470017B9AC /* CardViewModel.swift */; };
+		B736778629F08CA20017B9AC /* AppIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736778529F08CA20017B9AC /* AppIcons.swift */; };
+		B736778929F093890017B9AC /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736778829F093890017B9AC /* FlexibleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +41,27 @@
 		B736772529F05D260017B9AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B736772729F05D260017B9AC /* SwiftUIProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIProject.entitlements; sourceTree = "<group>"; };
 		B736772929F05D260017B9AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B736773829F065E40017B9AC /* CardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
+		B736773A29F066220017B9AC /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		B736773E29F067DD0017B9AC /* Vendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
+		B736774429F06ADF0017B9AC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B736776029F082120017B9AC /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		B736776129F082120017B9AC /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		B736776229F082120017B9AC /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Medium.ttf"; sourceTree = "<group>"; };
+		B736776329F082120017B9AC /* OpenSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		B736776429F082130017B9AC /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		B736776529F082130017B9AC /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		B736776629F082130017B9AC /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		B736776729F082130017B9AC /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		B736776829F082130017B9AC /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		B736776929F082130017B9AC /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		B736776A29F082140017B9AC /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		B736776B29F082140017B9AC /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		B736777C29F086950017B9AC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B736777E29F087970017B9AC /* Font+OpenSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+OpenSans.swift"; sourceTree = "<group>"; };
+		B736778229F08B470017B9AC /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		B736778529F08CA20017B9AC /* AppIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcons.swift; sourceTree = "<group>"; };
+		B736778829F093890017B9AC /* FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +94,10 @@
 		B736772029F05D240017B9AC /* SwiftUIProject */ = {
 			isa = PBXGroup;
 			children = (
-				B736772129F05D240017B9AC /* SwiftUIProjectApp.swift */,
-				B736772329F05D240017B9AC /* ContentView.swift */,
-				B736772529F05D260017B9AC /* Assets.xcassets */,
+				B736777929F086500017B9AC /* Core */,
+				B736775E29F081E80017B9AC /* Resources */,
+				B736773129F065B50017B9AC /* UI */,
+				B736773029F065AD0017B9AC /* App */,
 				B736772729F05D260017B9AC /* SwiftUIProject.entitlements */,
 				B736772829F05D260017B9AC /* Preview Content */,
 			);
@@ -67,6 +110,170 @@
 				B736772929F05D260017B9AC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B736773029F065AD0017B9AC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B736772129F05D240017B9AC /* SwiftUIProjectApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B736773129F065B50017B9AC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B736778729F0937E0017B9AC /* Components */,
+				B736773229F065BB0017B9AC /* Cards */,
+				B736772329F05D240017B9AC /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B736773229F065BB0017B9AC /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				B736774029F06ABC0017B9AC /* Components */,
+				B736773529F065D10017B9AC /* ViewModel */,
+				B736773429F065CC0017B9AC /* View */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		B736773429F065CC0017B9AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B736773A29F066220017B9AC /* CardsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B736773529F065D10017B9AC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B736773829F065E40017B9AC /* CardsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B736773C29F067B90017B9AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B736773D29F067BF0017B9AC /* Vendor */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B736773D29F067BF0017B9AC /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				B736773E29F067DD0017B9AC /* Vendor.swift */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		B736774029F06ABC0017B9AC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B736774129F06AC30017B9AC /* Card */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B736774129F06AC30017B9AC /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				B736778129F08B3D0017B9AC /* ViewModel */,
+				B736778029F08B370017B9AC /* View */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		B736775E29F081E80017B9AC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B736772529F05D260017B9AC /* Assets.xcassets */,
+				B736775F29F082070017B9AC /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B736775F29F082070017B9AC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B736777829F082680017B9AC /* OpenSans */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B736777829F082680017B9AC /* OpenSans */ = {
+			isa = PBXGroup;
+			children = (
+				B736776729F082130017B9AC /* OpenSans-Bold.ttf */,
+				B736776A29F082140017B9AC /* OpenSans-BoldItalic.ttf */,
+				B736776029F082120017B9AC /* OpenSans-ExtraBold.ttf */,
+				B736776429F082130017B9AC /* OpenSans-ExtraBoldItalic.ttf */,
+				B736776629F082130017B9AC /* OpenSans-Italic.ttf */,
+				B736776529F082130017B9AC /* OpenSans-Light.ttf */,
+				B736776129F082120017B9AC /* OpenSans-LightItalic.ttf */,
+				B736776229F082120017B9AC /* OpenSans-Medium.ttf */,
+				B736776329F082120017B9AC /* OpenSans-MediumItalic.ttf */,
+				B736776829F082130017B9AC /* OpenSans-Regular.ttf */,
+				B736776929F082130017B9AC /* OpenSans-SemiBold.ttf */,
+				B736776B29F082140017B9AC /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			path = OpenSans;
+			sourceTree = "<group>";
+		};
+		B736777929F086500017B9AC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B736778429F08C940017B9AC /* AssetHelpers */,
+				B736777A29F086690017B9AC /* Extensions */,
+				B736773C29F067B90017B9AC /* Models */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B736777A29F086690017B9AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B736777C29F086950017B9AC /* Colors.swift */,
+				B736777E29F087970017B9AC /* Font+OpenSans.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B736778029F08B370017B9AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B736774429F06ADF0017B9AC /* CardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B736778129F08B3D0017B9AC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B736778229F08B470017B9AC /* CardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B736778429F08C940017B9AC /* AssetHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				B736778529F08CA20017B9AC /* AppIcons.swift */,
+			);
+			path = AssetHelpers;
+			sourceTree = "<group>";
+		};
+		B736778729F0937E0017B9AC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B736778829F093890017B9AC /* FlexibleView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +335,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B736772A29F05D260017B9AC /* Preview Assets.xcassets in Resources */,
+				B736776F29F0823F0017B9AC /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				B736777129F082440017B9AC /* OpenSans-Light.ttf in Resources */,
+				B736777429F0824B0017B9AC /* OpenSans-MediumItalic.ttf in Resources */,
 				B736772629F05D260017B9AC /* Assets.xcassets in Resources */,
+				B736776D29F082330017B9AC /* OpenSans-BoldItalic.ttf in Resources */,
+				B736777629F082500017B9AC /* OpenSans-SemiBold.ttf in Resources */,
+				B736776C29F082300017B9AC /* OpenSans-Bold.ttf in Resources */,
+				B736776E29F0823D0017B9AC /* OpenSans-ExtraBold.ttf in Resources */,
+				B736777029F082420017B9AC /* OpenSans-Italic.ttf in Resources */,
+				B736777329F082490017B9AC /* OpenSans-Medium.ttf in Resources */,
+				B736777529F0824E0017B9AC /* OpenSans-Regular.ttf in Resources */,
+				B736777729F082530017B9AC /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				B736777229F082470017B9AC /* OpenSans-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +358,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B736773929F065E40017B9AC /* CardsViewModel.swift in Sources */,
 				B736772429F05D240017B9AC /* ContentView.swift in Sources */,
+				B736778629F08CA20017B9AC /* AppIcons.swift in Sources */,
+				B736773F29F067DD0017B9AC /* Vendor.swift in Sources */,
+				B736777D29F086950017B9AC /* Colors.swift in Sources */,
+				B736778929F093890017B9AC /* FlexibleView.swift in Sources */,
+				B736773B29F066220017B9AC /* CardsView.swift in Sources */,
+				B736774529F06ADF0017B9AC /* CardView.swift in Sources */,
 				B736772229F05D240017B9AC /* SwiftUIProjectApp.swift in Sources */,
+				B736777F29F087970017B9AC /* Font+OpenSans.swift in Sources */,
+				B736778329F08B470017B9AC /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
