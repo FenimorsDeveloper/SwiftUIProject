@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		B71FD9F329F87C3500876CDA /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FD9F229F87C3500876CDA /* TagView.swift */; };
 		B71FD9F529F87C6C00876CDA /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FD9F429F87C6C00876CDA /* TagViewModel.swift */; };
+		B71FDA0129F88C9A00876CDA /* VendorsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FDA0029F88C9A00876CDA /* VendorsRepository.swift */; };
+		B71FDA0329F88CB100876CDA /* VendorsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FDA0229F88CB100876CDA /* VendorsInteractor.swift */; };
+		B71FDA0729F88EF100876CDA /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FDA0629F88EF100876CDA /* SearchBarView.swift */; };
+		B71FDA0929F88F5700876CDA /* View+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FDA0829F88F5700876CDA /* View+Placeholder.swift */; };
 		B736772229F05D240017B9AC /* SwiftUIProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736772129F05D240017B9AC /* SwiftUIProjectApp.swift */; };
 		B736772429F05D240017B9AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736772329F05D240017B9AC /* ContentView.swift */; };
 		B736772629F05D260017B9AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B736772529F05D260017B9AC /* Assets.xcassets */; };
@@ -45,6 +49,10 @@
 		B71FD9EE29F8788000876CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B71FD9F229F87C3500876CDA /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		B71FD9F429F87C6C00876CDA /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
+		B71FDA0029F88C9A00876CDA /* VendorsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorsRepository.swift; sourceTree = "<group>"; };
+		B71FDA0229F88CB100876CDA /* VendorsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorsInteractor.swift; sourceTree = "<group>"; };
+		B71FDA0629F88EF100876CDA /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		B71FDA0829F88F5700876CDA /* View+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Placeholder.swift"; sourceTree = "<group>"; };
 		B736771E29F05D240017B9AC /* SwiftUIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B736772129F05D240017B9AC /* SwiftUIProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIProjectApp.swift; sourceTree = "<group>"; };
 		B736772329F05D240017B9AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +131,38 @@
 				B71FD9F429F87C6C00876CDA /* TagViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B71FD9FE29F88C7800876CDA /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B71FDA0029F88C9A00876CDA /* VendorsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B71FD9FF29F88C8B00876CDA /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				B71FDA0229F88CB100876CDA /* VendorsInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		B71FDA0429F88EAF00876CDA /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				B71FDA0529F88ECB00876CDA /* View */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		B71FDA0529F88ECB00876CDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B71FDA0629F88EF100876CDA /* SearchBarView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B736771529F05D240017B9AC = {
@@ -228,6 +268,7 @@
 		B736774029F06ABC0017B9AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B71FDA0429F88EAF00876CDA /* SearchBar */,
 				B71FD9EF29F87C1300876CDA /* TagView */,
 				B7781B7929F86A19009867CA /* CategoryView */,
 				B736774129F06AC30017B9AC /* Card */,
@@ -283,6 +324,8 @@
 		B736777929F086500017B9AC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B71FD9FF29F88C8B00876CDA /* Interactors */,
+				B71FD9FE29F88C7800876CDA /* Repositories */,
 				B7781B7629F86596009867CA /* Utilities */,
 				B736778429F08C940017B9AC /* AssetHelpers */,
 				B736777A29F086690017B9AC /* Extensions */,
@@ -296,6 +339,7 @@
 			children = (
 				B736777C29F086950017B9AC /* Colors.swift */,
 				B736777E29F087970017B9AC /* Font+OpenSans.swift */,
+				B71FDA0829F88F5700876CDA /* View+Placeholder.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -499,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71FDA0129F88C9A00876CDA /* VendorsRepository.swift in Sources */,
 				B7781B7F29F86A8C009867CA /* CategoryViewModel.swift in Sources */,
 				B736773929F065E40017B9AC /* CardsViewModel.swift in Sources */,
 				B736772429F05D240017B9AC /* ContentView.swift in Sources */,
@@ -508,13 +553,16 @@
 				B736777D29F086950017B9AC /* Colors.swift in Sources */,
 				B7781B7C29F86A33009867CA /* CategoryView.swift in Sources */,
 				B736778929F093890017B9AC /* FlexibleView.swift in Sources */,
+				B71FDA0929F88F5700876CDA /* View+Placeholder.swift in Sources */,
 				B736773B29F066220017B9AC /* CardsView.swift in Sources */,
 				B736774529F06ADF0017B9AC /* CardView.swift in Sources */,
+				B71FDA0729F88EF100876CDA /* SearchBarView.swift in Sources */,
 				B736772229F05D240017B9AC /* SwiftUIProjectApp.swift in Sources */,
 				B71FD9F329F87C3500876CDA /* TagView.swift in Sources */,
 				B7781B7829F865B9009867CA /* SVGImageLoader.swift in Sources */,
 				B736777F29F087970017B9AC /* Font+OpenSans.swift in Sources */,
 				B736778329F08B470017B9AC /* CardViewModel.swift in Sources */,
+				B71FDA0329F88CB100876CDA /* VendorsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

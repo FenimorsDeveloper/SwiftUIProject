@@ -10,31 +10,32 @@ import SwiftUI
 struct CardView: View {
     @StateObject private var viewModel: CardViewModel
 
+    // temporary solution. GeometryReader causes some difficulties
+    private let screenWidth: CGFloat = UIScreen.main.bounds.width - 32
+
     init(vendor: Vendor) {
         self._viewModel = .init(wrappedValue: .init(vendor: vendor))
     }
 
     var body: some View {
-        GeometryReader { geometry in
-            VStack(alignment: .leading, spacing: .zero) {
-                coverPhoto
-                    .frame(width: geometry.size.width, height: 170)
-
-                Spacer()
-                    .frame(height: 10)
-
-                namePosition
-
-                Spacer()
-                    .frame(height: 6)
-
-                categories(geometry: geometry)
-
-                Spacer()
-                    .frame(height: 8)
-
-                tags(geometry: geometry)
-            }
+        VStack(alignment: .leading, spacing: .zero) {
+            coverPhoto
+                .frame(width: screenWidth, height: 170)
+            
+            Spacer()
+                .frame(height: 10)
+            
+            namePosition
+            
+            Spacer()
+                .frame(height: 6)
+            
+            categories
+            
+            Spacer()
+                .frame(height: 8)
+            
+            tags
         }
     }
 
@@ -133,8 +134,8 @@ struct CardView: View {
             .font(.openSans(.bold, size: 16))
     }
 
-    private func categories(geometry: GeometryProxy) -> some View {
-        FlexibleView(availableWidth: geometry.size.width,
+    private var categories: some View {
+        FlexibleView(availableWidth: screenWidth,
                      data: viewModel.categories,
                      verticalSpacing: 8,
                      horizontalSpacing: 14,
@@ -143,8 +144,8 @@ struct CardView: View {
         }
     }
 
-    private func tags(geometry: GeometryProxy) -> some View {
-        FlexibleView(availableWidth: geometry.size.width,
+    private var tags: some View {
+        FlexibleView(availableWidth: screenWidth,
                      data: viewModel.tags,
                      verticalSpacing: 3,
                      horizontalSpacing: 4,

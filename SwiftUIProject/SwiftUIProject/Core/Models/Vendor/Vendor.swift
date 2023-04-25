@@ -73,6 +73,64 @@ struct Vendor {
                       purpose: "shop")
               ])
     }
+
+    static var mockArray: [Vendor] {
+        [
+            .mock,
+            .init(id: 1,
+                  companyName: "Cafe & Restaurant",
+                  areaServed: "Ukraine",
+                  shopType: "Flowers",
+                  favorited: true,
+                  follow: false,
+                  businessType: "virtual",
+                  coverPhoto: .init(id: 980,
+                                    mediaUrl: URL(string: "https://i.imgur.com/OnwEDW3.jpg")!,
+                                    mediaType: .image),
+                  categories: [
+                    .init(id: 53,
+                          name: "Cafe & Restaurant",
+                          image: .init(id: 1344,
+                                       mediaUrl: URL(string: "https://media-staging.chatsumer.app/48/1830f855-6315-4d3c-a5dc-088ea826aef2.svg")!,
+                                       mediaType: .image))
+                  ],
+                  tags: [
+                    .init(id: 85,
+                          name: "Cafe",
+                          purpose: "shop")
+                  ]),
+            .init(id: 8,
+                  companyName: "Pets",
+                  areaServed: "Dnipro",
+                  shopType: "Bar",
+                  favorited: false,
+                  follow: false,
+                  businessType: "physical",
+                  coverPhoto: .init(id: 1381,
+                                    mediaUrl: URL(string: "https://i.imgur.com/CzXTtJV.jpg")!,
+                                    mediaType: .image),
+                  categories: [
+                    .init(id: 54,
+                          name: "Pets",
+                          image: .init(id: 1345,
+                                       mediaUrl: URL(string: "https://media-staging.chatsumer.app/48/1830f855-6315-4d3c-a5dc-088ea826aef2.svg")!,
+                                       mediaType: .image)),
+                    .init(id: 55,
+                          name: "Home",
+                          image: .init(id: 1345,
+                                       mediaUrl: URL(string: "https://media-staging.chatsumer.app/48/1830f855-6315-4d3c-a5dc-088ea826aef2.svg")!,
+                                       mediaType: .image))
+                  ],
+                  tags: [
+                    .init(id: 60,
+                          name: "New",
+                          purpose: "shop"),
+                    .init(id: 86,
+                          name: "Test",
+                          purpose: "shop")
+                  ])
+        ]
+    }
 }
 
 struct Media: Hashable {
