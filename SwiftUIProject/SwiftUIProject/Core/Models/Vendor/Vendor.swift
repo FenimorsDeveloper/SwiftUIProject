@@ -75,7 +75,7 @@ struct Vendor {
     }
 }
 
-struct Media {
+struct Media: Hashable {
     let id: Int64
     let mediaUrl: URL
     let mediaType: MediaType
@@ -85,14 +85,28 @@ enum MediaType {
     case image
 }
 
-struct Category {
+struct Category: Hashable {
     let id: Int64
     let name: String
     let image: Media
+
+    static var mock: Category {
+        .init(id: 40,
+              name: "Florists",
+              image: .init(id: 1348,
+                           mediaUrl: URL(string: "https://media-staging.chatsumer.app/48/1830f855-6315-4d3c-a5dc-088ea826aef2.svg")!,
+                           mediaType: .image))
+    }
 }
 
-struct Tag {
+struct Tag: Hashable {
     let id: Int64
     let name: String
     let purpose: String
+
+    static var mock: Tag {
+        .init(id: 99,
+              name: "Giant",
+              purpose: "shop")
+    }
 }

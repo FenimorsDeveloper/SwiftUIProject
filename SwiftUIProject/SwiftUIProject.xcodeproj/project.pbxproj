@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B71FD9F329F87C3500876CDA /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FD9F229F87C3500876CDA /* TagView.swift */; };
+		B71FD9F529F87C6C00876CDA /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FD9F429F87C6C00876CDA /* TagViewModel.swift */; };
 		B736772229F05D240017B9AC /* SwiftUIProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736772129F05D240017B9AC /* SwiftUIProjectApp.swift */; };
 		B736772429F05D240017B9AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736772329F05D240017B9AC /* ContentView.swift */; };
 		B736772629F05D260017B9AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B736772529F05D260017B9AC /* Assets.xcassets */; };
@@ -33,11 +35,16 @@
 		B736778629F08CA20017B9AC /* AppIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736778529F08CA20017B9AC /* AppIcons.swift */; };
 		B736778929F093890017B9AC /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736778829F093890017B9AC /* FlexibleView.swift */; };
 		B7781B7829F865B9009867CA /* SVGImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781B7729F865B9009867CA /* SVGImageLoader.swift */; };
+		B7781B7C29F86A33009867CA /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781B7B29F86A33009867CA /* CategoryView.swift */; };
+		B7781B7F29F86A8C009867CA /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781B7E29F86A8C009867CA /* CategoryViewModel.swift */; };
 		EC28C61497DE2C5D54EEC4A7 /* Pods_SwiftUIProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C87A6A8943832FEFC0D6CA9 /* Pods_SwiftUIProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C87A6A8943832FEFC0D6CA9 /* Pods_SwiftUIProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B71FD9EE29F8788000876CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B71FD9F229F87C3500876CDA /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		B71FD9F429F87C6C00876CDA /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
 		B736771E29F05D240017B9AC /* SwiftUIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B736772129F05D240017B9AC /* SwiftUIProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIProjectApp.swift; sourceTree = "<group>"; };
 		B736772329F05D240017B9AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +73,8 @@
 		B736778529F08CA20017B9AC /* AppIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcons.swift; sourceTree = "<group>"; };
 		B736778829F093890017B9AC /* FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
 		B7781B7729F865B9009867CA /* SVGImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGImageLoader.swift; sourceTree = "<group>"; };
+		B7781B7B29F86A33009867CA /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		B7781B7E29F86A8C009867CA /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		BE1908C16134E7E7AA21196A /* Pods-SwiftUIProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIProject.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIProject/Pods-SwiftUIProject.release.xcconfig"; sourceTree = "<group>"; };
 		C6A8865A3C6EF7A5B07A3013 /* Pods-SwiftUIProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIProject.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIProject/Pods-SwiftUIProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +100,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B71FD9EF29F87C1300876CDA /* TagView */ = {
+			isa = PBXGroup;
+			children = (
+				B71FD9F129F87C2600876CDA /* ViewModel */,
+				B71FD9F029F87C2100876CDA /* View */,
+			);
+			path = TagView;
+			sourceTree = "<group>";
+		};
+		B71FD9F029F87C2100876CDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B71FD9F229F87C3500876CDA /* TagView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B71FD9F129F87C2600876CDA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B71FD9F429F87C6C00876CDA /* TagViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B736771529F05D240017B9AC = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +146,7 @@
 		B736772029F05D240017B9AC /* SwiftUIProject */ = {
 			isa = PBXGroup;
 			children = (
+				B71FD9EE29F8788000876CDA /* Info.plist */,
 				B736777929F086500017B9AC /* Core */,
 				B736775E29F081E80017B9AC /* Resources */,
 				B736773129F065B50017B9AC /* UI */,
@@ -193,6 +228,8 @@
 		B736774029F06ABC0017B9AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B71FD9EF29F87C1300876CDA /* TagView */,
+				B7781B7929F86A19009867CA /* CategoryView */,
 				B736774129F06AC30017B9AC /* Card */,
 			);
 			path = Components;
@@ -301,6 +338,31 @@
 				B7781B7729F865B9009867CA /* SVGImageLoader.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B7781B7929F86A19009867CA /* CategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				B7781B7D29F86A7C009867CA /* ViewModel */,
+				B7781B7A29F86A28009867CA /* View */,
+			);
+			path = CategoryView;
+			sourceTree = "<group>";
+		};
+		B7781B7A29F86A28009867CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7781B7B29F86A33009867CA /* CategoryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7781B7D29F86A7C009867CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B7781B7E29F86A8C009867CA /* CategoryViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C450B95ADC264312242A596C /* Frameworks */ = {
@@ -437,15 +499,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7781B7F29F86A8C009867CA /* CategoryViewModel.swift in Sources */,
 				B736773929F065E40017B9AC /* CardsViewModel.swift in Sources */,
 				B736772429F05D240017B9AC /* ContentView.swift in Sources */,
 				B736778629F08CA20017B9AC /* AppIcons.swift in Sources */,
 				B736773F29F067DD0017B9AC /* Vendor.swift in Sources */,
+				B71FD9F529F87C6C00876CDA /* TagViewModel.swift in Sources */,
 				B736777D29F086950017B9AC /* Colors.swift in Sources */,
+				B7781B7C29F86A33009867CA /* CategoryView.swift in Sources */,
 				B736778929F093890017B9AC /* FlexibleView.swift in Sources */,
 				B736773B29F066220017B9AC /* CardsView.swift in Sources */,
 				B736774529F06ADF0017B9AC /* CardView.swift in Sources */,
 				B736772229F05D240017B9AC /* SwiftUIProjectApp.swift in Sources */,
+				B71FD9F329F87C3500876CDA /* TagView.swift in Sources */,
 				B7781B7829F865B9009867CA /* SVGImageLoader.swift in Sources */,
 				B736777F29F087970017B9AC /* Font+OpenSans.swift in Sources */,
 				B736778329F08B470017B9AC /* CardViewModel.swift in Sources */,
@@ -576,6 +642,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIProject/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIProject/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -615,6 +682,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIProject/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIProject/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

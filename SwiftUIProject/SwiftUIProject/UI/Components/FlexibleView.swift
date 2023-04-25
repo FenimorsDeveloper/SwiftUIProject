@@ -12,14 +12,15 @@ struct FlexibleView<Data: Collection, Content: View>: View where Data.Element: H
 
     let availableWidth: CGFloat
     let data: Data
-    let spacing: CGFloat
+    let verticalSpacing: CGFloat
+    let horizontalSpacing: CGFloat
     let alignment: HorizontalAlignment
     let content: (Data.Element) -> Content
 
     var body: some View {
-        VStack(alignment: alignment, spacing: spacing) {
+        VStack(alignment: alignment, spacing: verticalSpacing) {
             ForEach(computeRows(), id: \.self) { rowElements in
-                HStack(spacing: spacing) {
+                HStack(spacing: horizontalSpacing) {
                     ForEach(rowElements, id: \.self) { element in
                         content(element)
                             .fixedSize()
@@ -40,7 +41,7 @@ struct FlexibleView<Data: Collection, Content: View>: View where Data.Element: H
         for element in data {
             let elementSize = elementsSize[element, default: CGSize(width: availableWidth, height: 1)]
 
-            if remainingWidth - (elementSize.width + spacing) >= 0 {
+            if remainingWidth - (elementSize.width + horizontalSpacing) >= 0 {
                 rows[currentRow].append(element)
             } else {
                 currentRow +=  1
@@ -48,7 +49,7 @@ struct FlexibleView<Data: Collection, Content: View>: View where Data.Element: H
                 remainingWidth = availableWidth
             }
 
-            remainingWidth -= (elementSize.width + spacing)
+            remainingWidth -= (elementSize.width + horizontalSpacing)
         }
 
         return rows
@@ -60,7 +61,8 @@ extension View {
         background(
             GeometryReader { geometryProxy in
                 Color.clear
-                    .preference(key: FlexibleViewSizePreferenceKey.self, value: geometryProxy.size)
+                    .preference(key: FlexibleViewSizePreferenceKey.self,
+                                value: geometryProxy.size)
             }
         )
         .onPreferenceChange(FlexibleViewSizePreferenceKey.self, perform: onChange)

@@ -32,6 +32,10 @@ final class CardViewModel: ObservableObject {
         vendor.categories
     }
 
+    var tags: [Tag] {
+        vendor.tags
+    }
+
     private let vendor: Vendor
 
     init(vendor: Vendor) {

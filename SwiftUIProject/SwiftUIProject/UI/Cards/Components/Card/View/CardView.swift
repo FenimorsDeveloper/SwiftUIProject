@@ -15,16 +15,26 @@ struct CardView: View {
     }
 
     var body: some View {
-        VStack(spacing: .zero) {
-            coverPhoto
-                .overlay(coverPhotoOverlay)
+        GeometryReader { geometry in
+            VStack(alignment: .leading, spacing: .zero) {
+                coverPhoto
+                    .frame(width: geometry.size.width, height: 170)
 
-            Spacer()
-                .frame(height: 10)
+                Spacer()
+                    .frame(height: 10)
 
-            namePosition
+                namePosition
 
-            categories
+                Spacer()
+                    .frame(height: 6)
+
+                categories(geometry: geometry)
+
+                Spacer()
+                    .frame(height: 8)
+
+                tags(geometry: geometry)
+            }
         }
     }
 
@@ -36,10 +46,13 @@ struct CardView: View {
             case .success(let image):
                 image
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
+                    .frame(height: 170)
                     .cornerRadius(10)
                     .overlay(gradient)
                     .shadow(color: .black.opacity(0.05), radius: 15, x: 0, y: 10)
+                    .overlay(coverPhotoOverlay)
+                    .transition(.opacity.animation(.easeInOut(duration: 0.6)))
             case .failure(let error):
                 Text("Failed to load image: \(error.localizedDescription)")
             @unknown default:
@@ -120,8 +133,24 @@ struct CardView: View {
             .font(.openSans(.bold, size: 16))
     }
 
-    private var categories: some View {
-        Spacer()
+    private func categories(geometry: GeometryProxy) -> some View {
+        FlexibleView(availableWidth: geometry.size.width,
+                     data: viewModel.categories,
+                     verticalSpacing: 8,
+                     horizontalSpacing: 14,
+                     alignment: .leading) { category in
+            CategoryView(category: category)
+        }
+    }
+
+    private func tags(geometry: GeometryProxy) -> some View {
+        FlexibleView(availableWidth: geometry.size.width,
+                     data: viewModel.tags,
+                     verticalSpacing: 3,
+                     horizontalSpacing: 4,
+                     alignment: .leading) { tag in
+            TagView(tag: tag)
+        }
     }
 }
 
