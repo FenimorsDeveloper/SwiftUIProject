@@ -32,9 +32,12 @@
 		B736778329F08B470017B9AC /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736778229F08B470017B9AC /* CardViewModel.swift */; };
 		B736778629F08CA20017B9AC /* AppIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736778529F08CA20017B9AC /* AppIcons.swift */; };
 		B736778929F093890017B9AC /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736778829F093890017B9AC /* FlexibleView.swift */; };
+		B7781B7829F865B9009867CA /* SVGImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781B7729F865B9009867CA /* SVGImageLoader.swift */; };
+		EC28C61497DE2C5D54EEC4A7 /* Pods_SwiftUIProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C87A6A8943832FEFC0D6CA9 /* Pods_SwiftUIProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C87A6A8943832FEFC0D6CA9 /* Pods_SwiftUIProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B736771E29F05D240017B9AC /* SwiftUIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B736772129F05D240017B9AC /* SwiftUIProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIProjectApp.swift; sourceTree = "<group>"; };
 		B736772329F05D240017B9AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +65,9 @@
 		B736778229F08B470017B9AC /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		B736778529F08CA20017B9AC /* AppIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcons.swift; sourceTree = "<group>"; };
 		B736778829F093890017B9AC /* FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
+		B7781B7729F865B9009867CA /* SVGImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGImageLoader.swift; sourceTree = "<group>"; };
+		BE1908C16134E7E7AA21196A /* Pods-SwiftUIProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIProject.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIProject/Pods-SwiftUIProject.release.xcconfig"; sourceTree = "<group>"; };
+		C6A8865A3C6EF7A5B07A3013 /* Pods-SwiftUIProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIProject.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIProject/Pods-SwiftUIProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +75,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC28C61497DE2C5D54EEC4A7 /* Pods_SwiftUIProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E954737E19190FB49691D46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6A8865A3C6EF7A5B07A3013 /* Pods-SwiftUIProject.debug.xcconfig */,
+				BE1908C16134E7E7AA21196A /* Pods-SwiftUIProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B736771529F05D240017B9AC = {
 			isa = PBXGroup;
 			children = (
 				B736772029F05D240017B9AC /* SwiftUIProject */,
 				B736771F29F05D240017B9AC /* Products */,
+				7E954737E19190FB49691D46 /* Pods */,
+				C450B95ADC264312242A596C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -228,6 +246,7 @@
 		B736777929F086500017B9AC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B7781B7629F86596009867CA /* Utilities */,
 				B736778429F08C940017B9AC /* AssetHelpers */,
 				B736777A29F086690017B9AC /* Extensions */,
 				B736773C29F067B90017B9AC /* Models */,
@@ -276,6 +295,22 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		B7781B7629F86596009867CA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B7781B7729F865B9009867CA /* SVGImageLoader.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C450B95ADC264312242A596C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C87A6A8943832FEFC0D6CA9 /* Pods_SwiftUIProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,9 +318,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B736772D29F05D260017B9AC /* Build configuration list for PBXNativeTarget "SwiftUIProject" */;
 			buildPhases = (
+				382ABFC609EB7C2DE6237C69 /* [CP] Check Pods Manifest.lock */,
 				B736771A29F05D240017B9AC /* Sources */,
 				B736771B29F05D240017B9AC /* Frameworks */,
 				B736771C29F05D240017B9AC /* Resources */,
+				3EFAACCA960141DA2E5BBA9A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,6 +390,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		382ABFC609EB7C2DE6237C69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftUIProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EFAACCA960141DA2E5BBA9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUIProject/Pods-SwiftUIProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUIProject/Pods-SwiftUIProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUIProject/Pods-SwiftUIProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B736771A29F05D240017B9AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -367,6 +446,7 @@
 				B736773B29F066220017B9AC /* CardsView.swift in Sources */,
 				B736774529F06ADF0017B9AC /* CardView.swift in Sources */,
 				B736772229F05D240017B9AC /* SwiftUIProjectApp.swift in Sources */,
+				B7781B7829F865B9009867CA /* SVGImageLoader.swift in Sources */,
 				B736777F29F087970017B9AC /* Font+OpenSans.swift in Sources */,
 				B736778329F08B470017B9AC /* CardViewModel.swift in Sources */,
 			);
@@ -486,6 +566,7 @@
 		};
 		B736772E29F05D260017B9AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6A8865A3C6EF7A5B07A3013 /* Pods-SwiftUIProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -505,7 +586,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -513,7 +594,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Fenimors.SwiftUIProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -522,6 +605,7 @@
 		};
 		B736772F29F05D260017B9AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE1908C16134E7E7AA21196A /* Pods-SwiftUIProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -541,7 +625,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -549,7 +633,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Fenimors.SwiftUIProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

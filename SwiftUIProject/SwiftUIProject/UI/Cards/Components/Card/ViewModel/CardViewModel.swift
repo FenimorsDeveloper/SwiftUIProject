@@ -36,7 +36,6 @@ final class CardViewModel: ObservableObject {
 
     init(vendor: Vendor) {
         self.vendor = vendor
-
         self.isFavorited = vendor.favorited
     }
 
