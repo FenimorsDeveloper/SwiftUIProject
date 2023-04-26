@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CardView: View {
     @StateObject private var viewModel: CardViewModel
@@ -40,26 +41,22 @@ struct CardView: View {
     }
 
     private var coverPhoto: some View {
-        AsyncImage(url: viewModel.coverPhotoUrl) { phase in
-            switch phase {
-            case .empty:
+        KFImage(viewModel.coverPhotoUrl)
+            .placeholder({ _ in
                 ProgressView()
-            case .success(let image):
-                image
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 170)
-                    .cornerRadius(10)
-                    .overlay(gradient)
-                    .shadow(color: .black.opacity(0.05), radius: 15, x: 0, y: 10)
-                    .overlay(coverPhotoOverlay)
-                    .transition(.opacity.animation(.easeInOut(duration: 0.6)))
-            case .failure(let error):
-                Text("Failed to load image: \(error.localizedDescription)")
-            @unknown default:
-                fatalError("Unexpected AsyncImagePhase case")
-            }
-        }
+                    .frame(width: availableWidth, height: 170)
+            })
+            .onSuccess({ _ in
+                viewModel.imageLoaded()
+            })
+            .resizable()
+            .scaledToFill()
+            .frame(height: 170)
+            .cornerRadius(10)
+            .overlay(gradient.opacity(viewModel.showImageCover ? 1 : 0))
+            .shadow(color: .black.opacity(0.05), radius: 15, x: 0, y: 10)
+            .overlay(coverPhotoOverlay.opacity(viewModel.showImageCover ? 1 : 0))
+            .transition(.opacity.animation(.easeInOut(duration: 0.6)))
     }
 
     private var gradient: some View {
