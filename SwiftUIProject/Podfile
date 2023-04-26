@@ -4,6 +4,7 @@ target 'SwiftUIProject' do
   use_frameworks!
 
   pod 'SVGKit'
+  pod 'Kingfisher'
 
 end
 
