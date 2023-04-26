@@ -17,10 +17,13 @@ struct CardsView: View {
     private var content: some View {
         ScrollView {
             LazyVStack(spacing: 24) {
-                SearchBarView(text: viewModel.text)
+                SearchBarView(text: $viewModel.text)
 
-                ForEach(viewModel.vendors, id: \.id) { vendor in
+                ForEach(Array(viewModel.vendors.enumerated()), id: \.element.id) { index, vendor in
                     CardView(vendor: vendor)
+                        .onAppear {
+                            viewModel.onAppearCardView(with: index)
+                        }
                 }
             }
             .padding(.horizontal, 16)

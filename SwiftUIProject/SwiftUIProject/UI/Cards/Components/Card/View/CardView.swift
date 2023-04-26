@@ -10,8 +10,8 @@ import SwiftUI
 struct CardView: View {
     @StateObject private var viewModel: CardViewModel
 
-    // temporary solution. GeometryReader causes some difficulties
-    private let screenWidth: CGFloat = UIScreen.main.bounds.width - 32
+    /// Quick solution. Because of GeometryReader I've faced some issues and I have no time to fix it right now
+    private let availableWidth: CGFloat = UIScreen.main.bounds.width - 32
 
     init(vendor: Vendor) {
         self._viewModel = .init(wrappedValue: .init(vendor: vendor))
@@ -20,7 +20,7 @@ struct CardView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: .zero) {
             coverPhoto
-                .frame(width: screenWidth, height: 170)
+                .frame(width: availableWidth, height: 170)
             
             Spacer()
                 .frame(height: 10)
@@ -135,7 +135,7 @@ struct CardView: View {
     }
 
     private var categories: some View {
-        FlexibleView(availableWidth: screenWidth,
+        FlexibleView(availableWidth: availableWidth,
                      data: viewModel.categories,
                      verticalSpacing: 8,
                      horizontalSpacing: 14,
@@ -145,7 +145,7 @@ struct CardView: View {
     }
 
     private var tags: some View {
-        FlexibleView(availableWidth: screenWidth,
+        FlexibleView(availableWidth: availableWidth,
                      data: viewModel.tags,
                      verticalSpacing: 3,
                      horizontalSpacing: 4,
@@ -157,6 +157,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(vendor: .mock)
+        CardView(vendor: VendorMockData().getVendors().first!)
     }
 }

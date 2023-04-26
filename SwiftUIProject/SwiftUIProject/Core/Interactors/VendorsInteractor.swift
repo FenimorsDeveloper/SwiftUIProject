@@ -6,15 +6,15 @@
 //
 
 protocol VendorsInteractorProtocol {
-    func getAll() async -> [Vendor]
+    func getVendors(with text: String) async -> [Vendor]
 }
 
 struct VendorsInteractor: VendorsInteractorProtocol {
     let repository: VendorsRepositoryProtocol = VendorsRepository()
 
-    func getAll() async -> [Vendor] {
+    func getVendors(with text: String) async -> [Vendor] {
         do {
-            let vendors = try await repository.getAll()
+            let vendors = try await repository.getVendors(with: text)
             return vendors
         } catch {
             debugPrint("Failed to fetch all vendors with error \(error.localizedDescription)")

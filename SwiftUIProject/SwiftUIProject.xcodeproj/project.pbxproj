@@ -41,6 +41,7 @@
 		B7781B7829F865B9009867CA /* SVGImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781B7729F865B9009867CA /* SVGImageLoader.swift */; };
 		B7781B7C29F86A33009867CA /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781B7B29F86A33009867CA /* CategoryView.swift */; };
 		B7781B7F29F86A8C009867CA /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7781B7E29F86A8C009867CA /* CategoryViewModel.swift */; };
+		B7A90ECE29F9DC3E00767D37 /* VendorMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A90ECD29F9DC3E00767D37 /* VendorMockData.swift */; };
 		EC28C61497DE2C5D54EEC4A7 /* Pods_SwiftUIProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C87A6A8943832FEFC0D6CA9 /* Pods_SwiftUIProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		B7781B7729F865B9009867CA /* SVGImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGImageLoader.swift; sourceTree = "<group>"; };
 		B7781B7B29F86A33009867CA /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		B7781B7E29F86A8C009867CA /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		B7A90ECD29F9DC3E00767D37 /* VendorMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorMockData.swift; sourceTree = "<group>"; };
 		BE1908C16134E7E7AA21196A /* Pods-SwiftUIProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIProject.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIProject/Pods-SwiftUIProject.release.xcconfig"; sourceTree = "<group>"; };
 		C6A8865A3C6EF7A5B07A3013 /* Pods-SwiftUIProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIProject.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIProject/Pods-SwiftUIProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,6 +262,7 @@
 		B736773D29F067BF0017B9AC /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				B7A90ECC29F9DC3000767D37 /* MockData */,
 				B736773E29F067DD0017B9AC /* Vendor.swift */,
 			);
 			path = Vendor;
@@ -407,6 +410,14 @@
 				B7781B7E29F86A8C009867CA /* CategoryViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B7A90ECC29F9DC3000767D37 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				B7A90ECD29F9DC3E00767D37 /* VendorMockData.swift */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 		C450B95ADC264312242A596C /* Frameworks */ = {
@@ -563,6 +574,7 @@
 				B736777F29F087970017B9AC /* Font+OpenSans.swift in Sources */,
 				B736778329F08B470017B9AC /* CardViewModel.swift in Sources */,
 				B71FDA0329F88CB100876CDA /* VendorsInteractor.swift in Sources */,
+				B7A90ECE29F9DC3E00767D37 /* VendorMockData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,18 +8,20 @@
 import Foundation
 
 protocol VendorsRepositoryProtocol {
-    func getAll() async throws -> [Vendor]
+    func getVendors(with text: String) async throws -> [Vendor]
 }
 
 struct VendorsRepository: VendorsRepositoryProtocol {
 
-    func getAll() async throws -> [Vendor] {
-        try await mockData()
+    func getVendors(with text: String) async throws -> [Vendor] {
+        try await mockData(with: text)
     }
 
-    private func mockData() async throws -> [Vendor] {
+    private func mockData(with text: String) async throws -> [Vendor] {
         try await Task.sleep(nanoseconds: 1_000_000_000)
 
-        return Vendor.mockArray
+        let vendors = VendorMockData().getVendors()
+
+        return text.isEmpty ? vendors : vendors.filter { $0.companyName.lowercased().contains(text.lowercased()) }
     }
 }
