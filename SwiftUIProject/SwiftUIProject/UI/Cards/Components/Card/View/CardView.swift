@@ -12,10 +12,11 @@ struct CardView: View {
     @StateObject private var viewModel: CardViewModel
 
     /// Quick solution. Because of GeometryReader I've faced some issues and I have no time to fix it right now
-    private let availableWidth: CGFloat = UIScreen.main.bounds.width - 32
+    private let availableWidth: CGFloat
 
-    init(vendor: Vendor) {
+    init(vendor: Vendor, availableWidth: CGFloat) {
         self._viewModel = .init(wrappedValue: .init(vendor: vendor))
+        self.availableWidth = availableWidth
     }
 
     var body: some View {
@@ -46,16 +47,13 @@ struct CardView: View {
                 ProgressView()
                     .frame(width: availableWidth, height: 170)
             })
-            .onSuccess({ _ in
-                viewModel.imageLoaded()
-            })
             .resizable()
             .scaledToFill()
             .frame(height: 170)
             .cornerRadius(10)
-            .overlay(gradient.opacity(viewModel.showImageCover ? 1 : 0))
+            .overlay(gradient)
             .shadow(color: .black.opacity(0.05), radius: 15, x: 0, y: 10)
-            .overlay(coverPhotoOverlay.opacity(viewModel.showImageCover ? 1 : 0))
+            .overlay(coverPhotoOverlay)
             .transition(.opacity.animation(.easeInOut(duration: 0.6)))
     }
 
@@ -154,6 +152,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(vendor: VendorMockData().getVendors().first!)
+        CardView(vendor: VendorMockData().getVendors().first!, availableWidth: UIScreen.main.bounds.width)
     }
 }

@@ -11,7 +11,6 @@ import SwiftUI
 final class CardViewModel: ObservableObject {
 
     @Published var isFavorited: Bool
-    @Published var showImageCover: Bool = false
 
     var coverPhotoUrl: URL {
         vendor.coverPhoto.mediaUrl
@@ -46,9 +45,5 @@ final class CardViewModel: ObservableObject {
 
     func onBookmark() {
         isFavorited.toggle()
-    }
-
-    func imageLoaded() {
-        showImageCover.toggle()
     }
 }

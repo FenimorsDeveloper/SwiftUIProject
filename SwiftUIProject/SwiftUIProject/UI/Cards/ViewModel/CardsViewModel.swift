@@ -40,16 +40,20 @@ final class CardsViewModel: ObservableObject {
     private func setupBindings() {
         $text
             .sink { [weak self] text in
-                self?.filterVendors(with: text)
+                if text.count > 2 {
+                    self?.filteredLoadData()
+                }
             }
             .store(in: &cancellables)
     }
 
-    private func filterVendors(with text: String) {
-        if text.count < 3 {
+    private func filteredLoadData() {
+        Task {
+            let vendors = await vendorsInteractor.getVendors(with: text)
 
-        } else {
-
+            DispatchQueue.main.async {
+                self.vendors = vendors
+            }
         }
     }
 }

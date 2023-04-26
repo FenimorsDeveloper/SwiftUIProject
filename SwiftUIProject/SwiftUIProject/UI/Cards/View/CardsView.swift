@@ -20,7 +20,8 @@ struct CardsView: View {
                 SearchBarView(text: $viewModel.text)
 
                 ForEach(Array(viewModel.vendors.enumerated()), id: \.element.id) { index, vendor in
-                    CardView(vendor: vendor)
+                    CardView(vendor: vendor,
+                             availableWidth: UIScreen.main.bounds.width - 32)
                         .onAppear {
                             viewModel.onAppearCardView(with: index)
                         }
